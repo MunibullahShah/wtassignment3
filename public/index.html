@@ -10,20 +10,23 @@
     <link rel="stylesheet" href="jqstyles.css" />
 
     <style>
-        body{
-            background-color:#fff;
+        body {
+            background-color: #fff;
         }
+
         .header {
             padding: 30px 10rem;
             background-color: rgb(4, 78, 181);
             text-align: center;
             align-items: center;
             margin-bottom: 10px;
-            
+
         }
+
         .header h3 {
             color: #fff;
         }
+
         .add-member {
             /* position: relative; */
             background-color: rgb(57, 141, 214);
@@ -33,6 +36,7 @@
             margin-left: 0px;
             float: right;
         }
+
         .add-member:hover {
             background-color: #aaa;
             color: #333;
@@ -45,12 +49,14 @@
             margin-right: 5px;
             align-self: center;
         }
+
         .delete {
             background-color: rgb(175, 56, 20);
             color: #fff;
             padding: 5px 15px;
             align-self: center;
         }
+
         .close-btn {
             background-color: rgb(199, 83, 47);
             color: #fff;
@@ -58,6 +64,7 @@
             align-self: center;
             border: none;
         }
+
         h4 {
             width: 100%;
             background-color: #333;
@@ -73,13 +80,13 @@
         <h3>Faculty Data</h3>
     </div>
     <hr>
-    
+
     <div class="container">
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-secondary add-member" data-toggle="modal" data-target="#addModal">
             Add Member
         </button>
-        
+
 
         <!-- Modal -->
         <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
@@ -94,59 +101,44 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <small id="idHelp" class="form-text text-muted">Enter ID of the faculty member</small>
                             <label for="name">Name</label>
                             <input type="text" class="form-control" name="name" id="name" aria-describedby="nameHelp"
                                 placeholder="Name" />
-                            <small id="nameHelp" class="form-text text-muted">Enter name of the faculty member</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="age">Age</label>
-                            <input type="number" class="form-control" name="age" id="age" aria-describedby="ageHelp"
-                                min="0" max="70" />
-                            <small id="ageHelp" class="form-text text-muted">Enter age of the faculty member</small>
                         </div>
                         <div class="form-group">
                             <label for="gender">Gender</label>
                             <select class="form-control" name="gender" id="gender" aria-describedby="genderHelp">
                                 <option>Male</option>
                                 <option>Female</option>
-                                <option>Other</option>
                             </select>
-                            <small id="nameHelp" class="form-text text-muted">Select gender of the faculty
-                                member</small>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" class="form-control" name="email" id="email"
-                                aria-describedby="emailHelp" placeholder="example@example.com" />
-                            <small id="emailHelp" class="form-text text-muted">Enter email of the faculty member</small>
+                                aria-describedby="emailHelp" placeholder="muneeb@shah.com" />
                         </div>
                         <div class="form-group">
-                            <label for="country">Address Country</label>
+                            <label for="">Adress:</label>
+                            </br>
+                            <label for="country">Country</label>
                             <input type="text" class="form-control" name="country" id="country"
                                 aria-describedby="countryHelp" placeholder="Country" />
-                            <small id="countryHelp" class="form-text text-muted">Enter country for the address</small>
                         </div>
                         <div class="form-group">
-                            <label for="city">Address City</label>
+                            <label for="city">City</label>
                             <input type="text" class="form-control" name="city" id="city" aria-describedby="cityHelp"
                                 placeholder="City" />
-                            <small id="cityHelp" class="form-text text-muted">Enter city for the address</small>
                         </div>
                         <div class="form-group">
-                            <label for="street_address">Address</label>
+                            <label for="street_address">Street</label>
                             <input type="text" class="form-control" name="street_address" id="street_address"
-                                aria-describedby="street_addressHelp" placeholder="Society/Street" />
-                            <small id="street_addressHelp" class="form-text text-muted">Enter street address</small>
+                                aria-describedby="street_addressHelp" placeholder="Street" />
                         </div>
                         <div class="form-group">
-                            <label for="phone_numbers">Phone Numbers
-
-                            </label>
+                            <label for="phone_numbers">Phone Numbers</label>
 
                             <input type="text" class="form-control width" name="phone_numbers" id="phone_numbers"
-                                aria-describedby="phone_numbersHelp" placeholder="Phone number" />
+                                aria-describedby="phone_numbersHelp" placeholder="Phone numbers" />
 
                             <small id="phone_numbersHelp" class="form-text text-muted">Enter phone numbers, to enter
                                 more than one phone numbers use semi
@@ -158,14 +150,12 @@
                             <label for="course_code">Course Code</label>
                             <select class="form-control" name="course_code" id="course_code"
                                 aria-describedby="course_codeHelp">
-                                <option>CSE100</option>
+                                <option>MT323</option>
                                 <option>CSE200</option>
                                 <option>HUM100</option>
                                 <option>EE101</option>
                                 <option>MTH300</option>
                             </select>
-                            <small id="nameHelp" class="form-text text-muted">Select Course Code of the faculty
-                                member</small>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -198,14 +188,6 @@
                             <label for="Uname">Name</label>
                             <input type="text" class="form-control" name="Uname" id="Uname" aria-describedby="nameHelp"
                                 placeholder="Name" />
-                            <small id="nameHelp" class="form-text text-muted">Update name of the faculty
-                                member</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="Uage">Age</label>
-                            <input type="number" class="form-control" name="Uage" id="Uage" aria-describedby="ageHelp"
-                                min="0" max="70" />
-                            <small id="ageHelp" class="form-text text-muted">Update age of the faculty member</small>
                         </div>
                         <div class="form-group">
                             <label for="Ugender">Gender</label>
@@ -214,38 +196,34 @@
                                 <option>Female</option>
                                 <option>Other</option>
                             </select>
-                            <small id="genderHelp" class="form-text text-muted">Select gender of the faculty
-                                member to update</small>
                         </div>
                         <div class="form-group">
                             <label for="Uemail">Email</label>
                             <input type="email" class="form-control" name="Uemail" id="Uemail"
                                 aria-describedby="emailHelp" placeholder="example@example.com" />
-                            <small id="emailHelp" class="form-text text-muted">update email of the faculty
-                                member</small>
                         </div>
                         <div class="form-group">
-                            <label for="Ucountry">Address Country</label>
+                            <label for="">Address:</label>
+                            <label for="Ucountry">Country</label>
                             <input type="text" class="form-control" name="Ucountry" id="Ucountry"
                                 aria-describedby="countryHelp" placeholder="Country" />
-                            <small id="countryHelp" class="form-text text-muted">update country for the address</small>
                         </div>
                         <div class="form-group">
-                            <label for="Ucity">Address City</label>
+                            <label for="Ucity">City</label>
                             <input type="text" class="form-control" name="Ucity" id="Ucity" aria-describedby="cityHelp"
                                 placeholder="City" />
                             <small id="cityHelp" class="form-text text-muted">update city for the address</small>
                         </div>
                         <div class="form-group">
-                            <label for="Ustreet_address">Address</label>
+                            <label for="Ustreet_address">Street</label>
                             <input type="text" class="form-control" name="Ustreet_address" id="Ustreet_address"
-                                aria-describedby="street_addressHelp" placeholder="Society/Street" />
+                                aria-describedby="street_addressHelp" placeholder="Street" />
                             <small id="street_addressHelp" class="form-text text-muted">update street address</small>
                         </div>
                         <div class="form-group">
                             <label for="Uphone_numbers">Phone Numbers</label>
                             <input type="text" class="form-control width" name="phone_numbers" id="Uphone_numbers"
-                                aria-describedby="phone_numbersHelp" placeholder="Phone number" />
+                                aria-describedby="phone_numbersHelp" placeholder="Phone numbers" />
 
                             <small id="Yphone_numbersHelp" class="form-text text-muted">Enter phone numbers, to enter
                                 more than one phone numbers use semi
@@ -258,14 +236,13 @@
                             <label for="Ucourse_code">Course Code</label>
                             <select class="form-control" name="Ucourse_code" id="Ucourse_code"
                                 aria-describedby="course_codeHelp">
+                                <option>MT323</option>
                                 <option>CSE100</option>
                                 <option>CSE200</option>
                                 <option>HUM100</option>
                                 <option>EE101</option>
                                 <option>MTH300</option>
                             </select>
-                            <small id="nameHelp" class="form-text text-muted">Select Course Code of the faculty
-                                member to update</small>
                         </div>
                     </div>
                     <div class="modal-footer">
