@@ -25,7 +25,7 @@ $(function () {
             phone_number,
         });
         $.ajax({
-            url: "http://localhost:2500/faculty/" + id,
+            url: "https://wtassignment3.herokuapp.com/faculty/" + id,
             headers: { "Content-Type": "application/json" },
             dataType: "json",
             data: tosend,
@@ -43,7 +43,7 @@ function handleUpdate() {
     var btn = $(this);
     var parentDiv = btn.closest(".member");
     let id = parentDiv.attr("data-id");
-    $.get("http://localhost:2500/faculty/" + id, function (response) {
+    $.get("https://wtassignment3.herokuapp.com/faculty/" + id, function (response) {
 
         $("#updateId").val(response.id);
         $("#Uname").val(response.name);
@@ -53,7 +53,7 @@ function handleUpdate() {
         $("#Ucity").val(response.address.city);
         $("#Ustreet_address").val(response.address.street_address);
         $("#Ucourse_code").val(response.course_code);
-        $("#Uphone_numbers").val(response.phone_numbers);
+        $("#Uphone_numbers").val(response.phone_number);
 
         $("#updateModal").modal("show");
 
@@ -86,7 +86,7 @@ function addMember() {
     //console.log("Sending data" +tosend);
     //console.table(tosend);
     $.ajax({
-        url: "http://localhost:2500/faculty",
+        url: "https://wtassignment3.herokuapp.com/faculty",
         method: "POST",
         headers: { "Content-Type": "application/json" },
         dataType: "json",
@@ -112,7 +112,7 @@ function handleDelete() {
     let id = parentDiv.attr("data-id");
     console.log(id);
     $.ajax({
-        url: "http://localhost:2500/faculty/" + id,
+        url: "https://wtassignment3.herokuapp.com/faculty/" + id,
         method: "DELETE",
         success: function () {
             loadMembers();
@@ -121,7 +121,7 @@ function handleDelete() {
 }
 function loadMembers() {
     $.ajax({
-        url: "http://localhost:2500/faculty",
+        url: "https://wtassignment3.herokuapp.com/faculty",
         method: "GET",
         error: function (response) {
             var faculty = $("#faculty");
