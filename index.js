@@ -16,7 +16,7 @@ const jsonObject = [
     "name": "irfan",
     "email": "afsajj@gmac.com",
     "phone_number": ["3232", "32324423"],
-    "gender": "male",
+    "gender": "Male",
     "course_code": "MT323",
     "address": {
       "country": "pakistan",
